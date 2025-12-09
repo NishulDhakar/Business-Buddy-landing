@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/* ============================
+   ROOT TOKENS
+============================ */
+:root {
+  --background: #FAFAFA;
+  --foreground: #1B1B1B;
+}
+
+/* ============================
+   TAILWIND THEME TOKENS
+============================ */
+@theme inline {
+  /* ===== Fonts ===== */
+  --font-sans: Inter, sans-serif;
+  --font-display: "Inter Display", sans-serif;
+
+  /* ===== Background Colors ===== */
+  --color-background: #FAFAFA;
+  --color-background-secondary: #F1F1F1;
+  --color-background-pure: #FFFFFF;
+
+  /* ===== Primary Colors ===== */
+  --color-primary: #1B1B1B;
+  --color-primary-light: #32323E;
+
+  /* ===== Accent Colors ===== */
+  --color-accent-cyan: #6AF7FE;
+  --color-accent-blue: #488CED;
+  --color-accent-purple: #8930FD;
+  --color-accent-sky: #49CCF9;
+  --color-accent-pink: #FF02F0;
+
+  /* ===== Text Colors ===== */
+  --color-text-main: #1B1B1B;
+  --color-text-secondary: #7D8692;
+  --color-text-muted: #525866;
+
+  /* ===== Dashboard ===== */
+  --color-dashboard-bg: #F5F7FA;
+  --color-dashboard-border: #E1E4EA;
+
+  /* ===== Shadows ===== */
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(106, 247, 254, 0.5);
+
+  /* ===== Background Images ===== */
+  --bg-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* ============================
+   DARK MODE
+============================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ============================
+   BASE STYLES
+============================ */
+@layer base {
+  html {
+    font-family: Inter, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter Display", sans-serif;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+/* ============================
+   UTILITIES
+============================ */
+
+/* Custom Scrollbar for dashboard table */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
